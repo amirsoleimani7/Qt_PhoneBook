@@ -1,1 +1,1 @@
-# Qt_PhoneBook
+# simple qt phone book
