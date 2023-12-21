@@ -27,3 +27,11 @@ void MainWindow::on_pushButton_clicked()
     add_acc->exec();
 }
 
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    remove = new remove_contact(this);
+    remove->exec();
+}
+

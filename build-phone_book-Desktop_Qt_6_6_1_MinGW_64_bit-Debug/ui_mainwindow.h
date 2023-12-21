@@ -15,6 +15,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +24,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_2;
     QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -34,9 +38,22 @@ public:
         MainWindow->resize(573, 475);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
+        widget = new QWidget(centralwidget);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(170, 150, 181, 121));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton_2 = new QPushButton(widget);
+        pushButton_2->setObjectName("pushButton_2");
+
+        verticalLayout->addWidget(pushButton_2);
+
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(170, 230, 181, 51));
+
+        verticalLayout->addWidget(pushButton);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -54,6 +71,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "remove contact", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "add contact", nullptr));
     } // retranslateUi
 

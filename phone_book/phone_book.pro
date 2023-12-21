@@ -11,15 +11,18 @@ CONFIG += c++17
 SOURCES += \
     addacc.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    remove_contact.cpp
 
 HEADERS += \
     addacc.h \
-    mainwindow.h
+    mainwindow.h \
+    remove_contact.h
 
 FORMS += \
     addacc.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    remove_contact.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
