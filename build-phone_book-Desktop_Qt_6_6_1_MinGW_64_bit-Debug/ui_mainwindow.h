@@ -26,6 +26,7 @@ public:
     QWidget *centralwidget;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_show_detail;
     QPushButton *pushButton_remove_fav;
     QPushButton *pushButton_show_all_fav;
     QPushButton *pushButton_add_to_fav_main;
@@ -45,10 +46,15 @@ public:
         centralwidget->setObjectName("centralwidget");
         widget = new QWidget(centralwidget);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(160, 150, 201, 247));
+        widget->setGeometry(QRect(160, 150, 201, 283));
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton_show_detail = new QPushButton(widget);
+        pushButton_show_detail->setObjectName("pushButton_show_detail");
+
+        verticalLayout->addWidget(pushButton_show_detail);
+
         pushButton_remove_fav = new QPushButton(widget);
         pushButton_remove_fav->setObjectName("pushButton_remove_fav");
 
@@ -101,6 +107,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton_show_detail->setText(QCoreApplication::translate("MainWindow", "show detail of a contact", nullptr));
         pushButton_remove_fav->setText(QCoreApplication::translate("MainWindow", "remove fav", nullptr));
         pushButton_show_all_fav->setText(QCoreApplication::translate("MainWindow", "show all fav", nullptr));
         pushButton_add_to_fav_main->setText(QCoreApplication::translate("MainWindow", "add to fav", nullptr));

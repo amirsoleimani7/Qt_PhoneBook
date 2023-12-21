@@ -7,6 +7,7 @@ release/remove_contact.o
 release/remove_fav.o
 release/show_all.o
 release/show_all_fav.o
+release/show_detail.o
 release/moc_add_to_fav.o
 release/moc_addacc.o
 release/moc_edit_contact.o
@@ -15,3 +16,4 @@ release/moc_remove_contact.o
 release/moc_remove_fav.o
 release/moc_show_all.o
 release/moc_show_all_fav.o
+release/moc_show_detail.o

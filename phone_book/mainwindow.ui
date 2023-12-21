@@ -20,10 +20,17 @@
       <x>160</x>
       <y>150</y>
       <width>201</width>
-      <height>247</height>
+      <height>283</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_show_detail">
+       <property name="text">
+        <string>show detail of a contact</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButton_remove_fav">
        <property name="text">

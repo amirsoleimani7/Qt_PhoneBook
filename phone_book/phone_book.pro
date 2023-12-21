@@ -17,7 +17,8 @@ SOURCES += \
     remove_contact.cpp \
     remove_fav.cpp \
     show_all.cpp \
-    show_all_fav.cpp
+    show_all_fav.cpp \
+    show_detail.cpp
 
 HEADERS += \
     add_to_fav.h \
@@ -27,7 +28,8 @@ HEADERS += \
     remove_contact.h \
     remove_fav.h \
     show_all.h \
-    show_all_fav.h
+    show_all_fav.h \
+    show_detail.h
 
 FORMS += \
     add_to_fav.ui \
@@ -37,7 +39,8 @@ FORMS += \
     remove_contact.ui \
     remove_fav.ui \
     show_all.ui \
-    show_all_fav.ui
+    show_all_fav.ui \
+    show_detail.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

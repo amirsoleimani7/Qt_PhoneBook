@@ -70,3 +70,10 @@ void MainWindow::on_pushButton_remove_fav_clicked()
     remove_fav_1->exec();
 }
 
+
+void MainWindow::on_pushButton_show_detail_clicked()
+{
+    detail_1 = new show_detail(this);
+    detail_1->exec();
+}
+
