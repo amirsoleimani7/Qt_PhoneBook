@@ -63,3 +63,10 @@ void MainWindow::on_pushButton_show_all_fav_clicked()
     show_fav->exec();
 }
 
+
+void MainWindow::on_pushButton_remove_fav_clicked()
+{
+    remove_fav_1 = new remove_fav(this);
+    remove_fav_1->exec();
+}
+

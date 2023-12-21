@@ -6,6 +6,7 @@
 #include "show_all.h"
 #include "add_to_fav.h"
 #include "show_all_fav.h"
+#include "remove_fav.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -35,6 +36,8 @@ private slots:
 
     void on_pushButton_show_all_fav_clicked();
 
+    void on_pushButton_remove_fav_clicked();
+
 private:
     Ui::MainWindow *ui;
     addacc *add_acc;
@@ -43,5 +46,7 @@ private:
     show_all *show_1;
     add_to_fav *fav;
     show_all_fav *show_fav;
+    remove_fav *remove_fav_1;
+
 };
 #endif // MAINWINDOW_H

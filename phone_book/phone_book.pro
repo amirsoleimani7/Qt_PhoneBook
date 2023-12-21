@@ -15,6 +15,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     remove_contact.cpp \
+    remove_fav.cpp \
     show_all.cpp \
     show_all_fav.cpp
 
@@ -24,6 +25,7 @@ HEADERS += \
     edit_contact.h \
     mainwindow.h \
     remove_contact.h \
+    remove_fav.h \
     show_all.h \
     show_all_fav.h
 
@@ -33,6 +35,7 @@ FORMS += \
     edit_contact.ui \
     mainwindow.ui \
     remove_contact.ui \
+    remove_fav.ui \
     show_all.ui \
     show_all_fav.ui
 

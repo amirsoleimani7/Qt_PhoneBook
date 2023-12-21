@@ -20,10 +20,17 @@
       <x>160</x>
       <y>150</y>
       <width>201</width>
-      <height>211</height>
+      <height>247</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_remove_fav">
+       <property name="text">
+        <string>remove fav</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButton_show_all_fav">
        <property name="text">
