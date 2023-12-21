@@ -49,3 +49,17 @@ void MainWindow::on_pushButton_show_all_contacts_clicked()
     show_1->exec();
 }
 
+
+void MainWindow::on_pushButton_add_to_fav_main_clicked()
+{
+    fav = new add_to_fav(this);
+    fav->exec();
+}
+
+
+void MainWindow::on_pushButton_show_all_fav_clicked()
+{
+    show_fav = new show_all_fav(this);
+    show_fav->exec();
+}
+
