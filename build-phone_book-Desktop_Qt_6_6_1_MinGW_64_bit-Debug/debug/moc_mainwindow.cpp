@@ -47,11 +47,15 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "on_pushButton_add_to_fav_main_clicked",
     "on_pushButton_show_all_fav_clicked",
     "on_pushButton_remove_fav_clicked",
-    "on_pushButton_show_detail_clicked"
+    "on_pushButton_show_detail_clicked",
+    "on_pushButton_adding_number_clicked",
+    "on_pushButton_remove_number_clicked",
+    "on_pushButton_edit_num_clicked",
+    "on_pushButton_search_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[20];
+    uint offsetsAndSizes[28];
     char stringdata0[11];
     char stringdata1[22];
     char stringdata2[1];
@@ -62,6 +66,10 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata7[35];
     char stringdata8[33];
     char stringdata9[34];
+    char stringdata10[36];
+    char stringdata11[36];
+    char stringdata12[31];
+    char stringdata13[29];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -76,7 +84,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(122, 37),  // "on_pushButton_add_to_fav_main..."
         QT_MOC_LITERAL(160, 34),  // "on_pushButton_show_all_fav_cl..."
         QT_MOC_LITERAL(195, 32),  // "on_pushButton_remove_fav_clicked"
-        QT_MOC_LITERAL(228, 33)   // "on_pushButton_show_detail_cli..."
+        QT_MOC_LITERAL(228, 33),  // "on_pushButton_show_detail_cli..."
+        QT_MOC_LITERAL(262, 35),  // "on_pushButton_adding_number_c..."
+        QT_MOC_LITERAL(298, 35),  // "on_pushButton_remove_number_c..."
+        QT_MOC_LITERAL(334, 30),  // "on_pushButton_edit_num_clicked"
+        QT_MOC_LITERAL(365, 28)   // "on_pushButton_search_clicked"
     },
     "MainWindow",
     "on_pushButton_clicked",
@@ -87,7 +99,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "on_pushButton_add_to_fav_main_clicked",
     "on_pushButton_show_all_fav_clicked",
     "on_pushButton_remove_fav_clicked",
-    "on_pushButton_show_detail_clicked"
+    "on_pushButton_show_detail_clicked",
+    "on_pushButton_adding_number_clicked",
+    "on_pushButton_remove_number_clicked",
+    "on_pushButton_edit_num_clicked",
+    "on_pushButton_search_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -99,7 +115,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -107,16 +123,24 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   62,    2, 0x08,    1 /* Private */,
-       3,    0,   63,    2, 0x08,    2 /* Private */,
-       4,    0,   64,    2, 0x08,    3 /* Private */,
-       5,    0,   65,    2, 0x08,    4 /* Private */,
-       6,    0,   66,    2, 0x08,    5 /* Private */,
-       7,    0,   67,    2, 0x08,    6 /* Private */,
-       8,    0,   68,    2, 0x08,    7 /* Private */,
-       9,    0,   69,    2, 0x08,    8 /* Private */,
+       1,    0,   86,    2, 0x08,    1 /* Private */,
+       3,    0,   87,    2, 0x08,    2 /* Private */,
+       4,    0,   88,    2, 0x08,    3 /* Private */,
+       5,    0,   89,    2, 0x08,    4 /* Private */,
+       6,    0,   90,    2, 0x08,    5 /* Private */,
+       7,    0,   91,    2, 0x08,    6 /* Private */,
+       8,    0,   92,    2, 0x08,    7 /* Private */,
+       9,    0,   93,    2, 0x08,    8 /* Private */,
+      10,    0,   94,    2, 0x08,    9 /* Private */,
+      11,    0,   95,    2, 0x08,   10 /* Private */,
+      12,    0,   96,    2, 0x08,   11 /* Private */,
+      13,    0,   97,    2, 0x08,   12 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -153,6 +177,14 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_pushButton_remove_fav_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_show_detail_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_adding_number_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_remove_number_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_edit_num_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_search_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -172,6 +204,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 5: _t->on_pushButton_show_all_fav_clicked(); break;
         case 6: _t->on_pushButton_remove_fav_clicked(); break;
         case 7: _t->on_pushButton_show_detail_clicked(); break;
+        case 8: _t->on_pushButton_adding_number_clicked(); break;
+        case 9: _t->on_pushButton_remove_number_clicked(); break;
+        case 10: _t->on_pushButton_edit_num_clicked(); break;
+        case 11: _t->on_pushButton_search_clicked(); break;
         default: ;
         }
     }
@@ -197,13 +233,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 12;
     }
     return _id;
 }

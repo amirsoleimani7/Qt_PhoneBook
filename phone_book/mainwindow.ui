@@ -6,79 +6,387 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
-    <height>475</height>
+    <width>793</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: #A0A0A0; /* Slightly lighter gray for the background */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+QPushButton:hover {
+    background-color: #808080; /* Slightly darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #606060; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>150</y>
-      <width>201</width>
-      <height>283</height>
+      <x>150</x>
+      <y>110</y>
+      <width>461</width>
+      <height>361</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_show_detail">
-       <property name="text">
-        <string>show detail of a contact</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_search">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>search</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_edit_num">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>editing a number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_adding_number">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>adding a number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_show_detail">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>show detail of a contact</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_remove_fav">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>remove fav</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_show_all_fav">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>show all fav</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_remove_fav">
-       <property name="text">
-        <string>remove fav</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_show_all_fav">
-       <property name="text">
-        <string>show all fav</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_add_to_fav_main">
-       <property name="text">
-        <string>add to fav</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_show_all_contacts">
-       <property name="text">
-        <string>show all contacts</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>edit contact</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>remove contact</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>add contact</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton_add_to_fav_main">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>add to fav</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_show_all_contacts">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>show all contacts</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_remove_number">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>removing a number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>edit contact</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>remove contact</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>add contact</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -88,7 +396,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>573</width>
+     <width>793</width>
      <height>25</height>
     </rect>
    </property>

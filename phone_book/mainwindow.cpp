@@ -77,3 +77,32 @@ void MainWindow::on_pushButton_show_detail_clicked()
     detail_1->exec();
 }
 
+
+void MainWindow::on_pushButton_adding_number_clicked()
+{
+    add_num = new adding_number(this);
+    add_num->exec();
+}
+
+
+void MainWindow::on_pushButton_remove_number_clicked()
+{
+    rev_num = new removing_number(this);
+    rev_num->exec();
+}
+
+
+void MainWindow::on_pushButton_edit_num_clicked()
+{
+    edit_num = new edit_number(this);
+    edit_num->exec();
+
+}
+
+
+void MainWindow::on_pushButton_search_clicked()
+{
+    sh = new search(this);
+    sh->exec();
+}
+

@@ -8,6 +8,10 @@
 #include "show_all_fav.h"
 #include "remove_fav.h"
 #include "show_detail.h"
+#include "adding_number.h"
+#include "removing_number.h"
+#include "edit_number.h"
+#include "search.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -41,6 +45,14 @@ private slots:
 
     void on_pushButton_show_detail_clicked();
 
+    void on_pushButton_adding_number_clicked();
+
+    void on_pushButton_remove_number_clicked();
+
+    void on_pushButton_edit_num_clicked();
+
+    void on_pushButton_search_clicked();
+
 private:
     Ui::MainWindow *ui;
     addacc *add_acc;
@@ -51,5 +63,9 @@ private:
     show_all_fav *show_fav;
     remove_fav *remove_fav_1;
     show_detail *detail_1;
+    adding_number *add_num;
+    removing_number *rev_num;
+    edit_number *edit_num;
+    search *sh;
 };
 #endif // MAINWINDOW_H

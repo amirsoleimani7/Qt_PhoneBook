@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>edit_number</class>
+ <widget class="QDialog" name="edit_number">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>493</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>90</y>
+     <width>271</width>
+     <height>246</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #404040; /* Text color */
+    font-family: &quot;Arial&quot;, sans-serif; /* Replace with your preferred font family */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+</string>
+          </property>
+          <property name="text">
+           <string>name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #404040; /* Text color */
+    font-family: &quot;Arial&quot;, sans-serif; /* Replace with your preferred font family */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+</string>
+          </property>
+          <property name="text">
+           <string>type</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #404040; /* Text color */
+    font-family: &quot;Arial&quot;, sans-serif; /* Replace with your preferred font family */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+</string>
+          </property>
+          <property name="text">
+           <string>number</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #404040; /* Text color */
+    font-family: &quot;Arial&quot;, sans-serif; /* Replace with your preferred font family */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+</string>
+          </property>
+          <property name="text">
+           <string>new number</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="lineEdit_name">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Default background color */
+    border: 2px solid #C0C0C0; /* Border color */
+    border-radius: 15px; /* Curved corners */
+    color: #404040; /* Text color */
+    padding: 8px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QLineEdit:hover {
+    background-color: #F0F0F0; /* Lighter background color on hover */
+    border: 2px solid #A0A0A0; /* Darker border on hover */
+}
+
+QLineEdit:focus {
+    border: 2px solid #606060; /* Even darker border when focused */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_type">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Default background color */
+    border: 2px solid #C0C0C0; /* Border color */
+    border-radius: 15px; /* Curved corners */
+    color: #404040; /* Text color */
+    padding: 8px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QLineEdit:hover {
+    background-color: #F0F0F0; /* Lighter background color on hover */
+    border: 2px solid #A0A0A0; /* Darker border on hover */
+}
+
+QLineEdit:focus {
+    border: 2px solid #606060; /* Even darker border when focused */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_number">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Default background color */
+    border: 2px solid #C0C0C0; /* Border color */
+    border-radius: 15px; /* Curved corners */
+    color: #404040; /* Text color */
+    padding: 8px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QLineEdit:hover {
+    background-color: #F0F0F0; /* Lighter background color on hover */
+    border: 2px solid #A0A0A0; /* Darker border on hover */
+}
+
+QLineEdit:focus {
+    border: 2px solid #606060; /* Even darker border when focused */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_new_number">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Default background color */
+    border: 2px solid #C0C0C0; /* Border color */
+    border-radius: 15px; /* Curved corners */
+    color: #404040; /* Text color */
+    padding: 8px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QLineEdit:hover {
+    background-color: #F0F0F0; /* Lighter background color on hover */
+    border: 2px solid #A0A0A0; /* Darker border on hover */
+}
+
+QLineEdit:focus {
+    border: 2px solid #606060; /* Even darker border when focused */
+}
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_change_number">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #808080; /* Default button color (gray) */
+    border: 2px solid #404040; /* Border color darker than the button color */
+    border-radius: 15px; /* Curved corners */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for content */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-weight: bold; /* Set font to bold */
+}
+
+QPushButton:hover {
+    background-color: #404040; /* Darker color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #202020; /* Even darker color on click */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>changing the number</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

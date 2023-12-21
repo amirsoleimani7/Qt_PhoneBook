@@ -39,7 +39,6 @@ void show_detail::on_pushButton_show_details_clicked()
 
                 // Append type and number to the detailsText
                 detailsText += "Type: " + type +"  "+ " Number: " + number + "\n";
-
             }
         }
 
