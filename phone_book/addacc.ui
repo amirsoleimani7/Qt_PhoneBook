@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -68,7 +68,7 @@
     <item>
      <widget class="QPushButton" name="pushButton_add_contact">
       <property name="text">
-       <string>PushButton</string>
+       <string>add contact</string>
       </property>
      </widget>
     </item>

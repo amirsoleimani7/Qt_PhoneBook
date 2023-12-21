@@ -18,12 +18,19 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>150</y>
-      <width>181</width>
-      <height>121</height>
+      <y>120</y>
+      <width>201</width>
+      <height>161</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>edit contact</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">

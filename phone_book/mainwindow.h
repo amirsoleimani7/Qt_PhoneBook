@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #include "addacc.h"
 #include "remove_contact.h"
+#include "edit_contact.h"
+#include "show_all.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -23,9 +25,15 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_show_all_contacts_clicked();
+
 private:
     Ui::MainWindow *ui;
     addacc *add_acc;
     remove_contact *remove;
+    edit_contact *edit;
+    show_all *show;
 };
 #endif // MAINWINDOW_H

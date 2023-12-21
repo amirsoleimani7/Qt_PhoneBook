@@ -35,3 +35,16 @@ void MainWindow::on_pushButton_2_clicked()
     remove->exec();
 }
 
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    edit = new edit_contact(this);
+    edit->exec();
+}
+
+
+void MainWindow::on_pushButton_show_all_contacts_clicked()
+{
+
+}
+

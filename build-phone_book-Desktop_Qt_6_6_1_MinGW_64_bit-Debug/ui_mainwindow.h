@@ -26,6 +26,7 @@ public:
     QWidget *centralwidget;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_3;
     QPushButton *pushButton_2;
     QPushButton *pushButton;
     QMenuBar *menubar;
@@ -40,10 +41,15 @@ public:
         centralwidget->setObjectName("centralwidget");
         widget = new QWidget(centralwidget);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(170, 150, 181, 121));
+        widget->setGeometry(QRect(170, 120, 201, 161));
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton_3 = new QPushButton(widget);
+        pushButton_3->setObjectName("pushButton_3");
+
+        verticalLayout->addWidget(pushButton_3);
+
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName("pushButton_2");
 
@@ -71,6 +77,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "edit contact", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "remove contact", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "add contact", nullptr));
     } // retranslateUi
