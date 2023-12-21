@@ -34,7 +34,7 @@ QPushButton:pressed {
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -400,8 +400,50 @@ QPushButton:pressed {
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuoptions">
+    <property name="title">
+     <string>options</string>
+    </property>
+    <addaction name="actionsave"/>
+    <addaction name="actionload"/>
+    <addaction name="actionexpotr"/>
+    <addaction name="actionimport"/>
+   </widget>
+   <addaction name="menuoptions"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionload">
+   <property name="text">
+    <string>load</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionexpotr">
+   <property name="text">
+    <string>export</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionimport">
+   <property name="text">
+    <string>import</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -10,9 +10,11 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -24,8 +26,12 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionsave;
+    QAction *actionload;
+    QAction *actionexpotr;
+    QAction *actionimport;
     QWidget *centralwidget;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton_search;
@@ -42,13 +48,14 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton;
     QMenuBar *menubar;
+    QMenu *menuoptions;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(793, 600);
         MainWindow->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #A0A0A0; /* Slightly lighter gray for the background */\n"
 "    border: 2px solid #404040; /* Border color darker than the button color */\n"
@@ -67,17 +74,25 @@ public:
 "    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted shadow on click */\n"
 "}\n"
 ""));
+        actionsave = new QAction(MainWindow);
+        actionsave->setObjectName("actionsave");
+        actionload = new QAction(MainWindow);
+        actionload->setObjectName("actionload");
+        actionexpotr = new QAction(MainWindow);
+        actionexpotr->setObjectName("actionexpotr");
+        actionimport = new QAction(MainWindow);
+        actionimport->setObjectName("actionimport");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(150, 110, 461, 361));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(150, 110, 461, 361));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        pushButton_search = new QPushButton(widget);
+        pushButton_search = new QPushButton(layoutWidget);
         pushButton_search->setObjectName("pushButton_search");
         pushButton_search->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -101,7 +116,7 @@ public:
 
         verticalLayout->addWidget(pushButton_search);
 
-        pushButton_edit_num = new QPushButton(widget);
+        pushButton_edit_num = new QPushButton(layoutWidget);
         pushButton_edit_num->setObjectName("pushButton_edit_num");
         pushButton_edit_num->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -125,7 +140,7 @@ public:
 
         verticalLayout->addWidget(pushButton_edit_num);
 
-        pushButton_adding_number = new QPushButton(widget);
+        pushButton_adding_number = new QPushButton(layoutWidget);
         pushButton_adding_number->setObjectName("pushButton_adding_number");
         pushButton_adding_number->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -149,7 +164,7 @@ public:
 
         verticalLayout->addWidget(pushButton_adding_number);
 
-        pushButton_show_detail = new QPushButton(widget);
+        pushButton_show_detail = new QPushButton(layoutWidget);
         pushButton_show_detail->setObjectName("pushButton_show_detail");
         pushButton_show_detail->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -173,7 +188,7 @@ public:
 
         verticalLayout->addWidget(pushButton_show_detail);
 
-        pushButton_remove_fav = new QPushButton(widget);
+        pushButton_remove_fav = new QPushButton(layoutWidget);
         pushButton_remove_fav->setObjectName("pushButton_remove_fav");
         pushButton_remove_fav->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -197,7 +212,7 @@ public:
 
         verticalLayout->addWidget(pushButton_remove_fav);
 
-        pushButton_show_all_fav = new QPushButton(widget);
+        pushButton_show_all_fav = new QPushButton(layoutWidget);
         pushButton_show_all_fav->setObjectName("pushButton_show_all_fav");
         pushButton_show_all_fav->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -226,7 +241,7 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        pushButton_add_to_fav_main = new QPushButton(widget);
+        pushButton_add_to_fav_main = new QPushButton(layoutWidget);
         pushButton_add_to_fav_main->setObjectName("pushButton_add_to_fav_main");
         pushButton_add_to_fav_main->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -250,7 +265,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_add_to_fav_main);
 
-        pushButton_show_all_contacts = new QPushButton(widget);
+        pushButton_show_all_contacts = new QPushButton(layoutWidget);
         pushButton_show_all_contacts->setObjectName("pushButton_show_all_contacts");
         pushButton_show_all_contacts->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -274,7 +289,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_show_all_contacts);
 
-        pushButton_remove_number = new QPushButton(widget);
+        pushButton_remove_number = new QPushButton(layoutWidget);
         pushButton_remove_number->setObjectName("pushButton_remove_number");
         pushButton_remove_number->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -298,7 +313,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_remove_number);
 
-        pushButton_3 = new QPushButton(widget);
+        pushButton_3 = new QPushButton(layoutWidget);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -322,7 +337,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_3);
 
-        pushButton_2 = new QPushButton(widget);
+        pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -346,7 +361,7 @@ public:
 
         verticalLayout_2->addWidget(pushButton_2);
 
-        pushButton = new QPushButton(widget);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName("pushButton");
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #808080; /* Default button color (gray) */\n"
@@ -376,11 +391,19 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 25));
+        menubar->setGeometry(QRect(0, 0, 793, 25));
+        menuoptions = new QMenu(menubar);
+        menuoptions->setObjectName("menuoptions");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menuoptions->menuAction());
+        menuoptions->addAction(actionsave);
+        menuoptions->addAction(actionload);
+        menuoptions->addAction(actionexpotr);
+        menuoptions->addAction(actionimport);
 
         retranslateUi(MainWindow);
 
@@ -390,6 +413,22 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionsave->setText(QCoreApplication::translate("MainWindow", "save", nullptr));
+#if QT_CONFIG(shortcut)
+        actionsave->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+S", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionload->setText(QCoreApplication::translate("MainWindow", "load", nullptr));
+#if QT_CONFIG(shortcut)
+        actionload->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+L", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionexpotr->setText(QCoreApplication::translate("MainWindow", "export", nullptr));
+#if QT_CONFIG(shortcut)
+        actionexpotr->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+E", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionimport->setText(QCoreApplication::translate("MainWindow", "import", nullptr));
+#if QT_CONFIG(shortcut)
+        actionimport->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+I", nullptr));
+#endif // QT_CONFIG(shortcut)
         pushButton_search->setText(QCoreApplication::translate("MainWindow", "search", nullptr));
         pushButton_edit_num->setText(QCoreApplication::translate("MainWindow", "editing a number", nullptr));
         pushButton_adding_number->setText(QCoreApplication::translate("MainWindow", "adding a number", nullptr));
@@ -402,6 +441,7 @@ public:
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "edit contact", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "remove contact", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "add contact", nullptr));
+        menuoptions->setTitle(QCoreApplication::translate("MainWindow", "options", nullptr));
     } // retranslateUi
 
 };
