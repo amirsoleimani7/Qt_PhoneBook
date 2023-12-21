@@ -28,7 +28,7 @@ show_all::show_all(QWidget *parent)
                 uniqueNames.append(name);
             }
         }
-
+        uniqueNames.sort();
         file_to.close();
 
         // Display the unique names in the QTextBrowser
