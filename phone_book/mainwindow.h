@@ -34,6 +34,6 @@ private:
     addacc *add_acc;
     remove_contact *remove;
     edit_contact *edit;
-    show_all *show;
+    show_all *show_1;
 };
 #endif // MAINWINDOW_H

@@ -1,0 +1,11 @@
+debug/addacc.o
+debug/edit_contact.o
+debug/main.o
+debug/mainwindow.o
+debug/remove_contact.o
+debug/show_all.o
+debug/moc_addacc.o
+debug/moc_edit_contact.o
+debug/moc_mainwindow.o
+debug/moc_remove_contact.o
+debug/moc_show_all.o

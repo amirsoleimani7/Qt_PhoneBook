@@ -17,13 +17,20 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
+      <x>160</x>
+      <y>150</y>
       <width>201</width>
       <height>161</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_show_all_contacts">
+       <property name="text">
+        <string>show all contacts</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="text">

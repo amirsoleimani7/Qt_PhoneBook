@@ -26,6 +26,7 @@ public:
     QWidget *centralwidget;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton_show_all_contacts;
     QPushButton *pushButton_3;
     QPushButton *pushButton_2;
     QPushButton *pushButton;
@@ -41,10 +42,15 @@ public:
         centralwidget->setObjectName("centralwidget");
         widget = new QWidget(centralwidget);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(170, 120, 201, 161));
+        widget->setGeometry(QRect(160, 150, 201, 161));
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton_show_all_contacts = new QPushButton(widget);
+        pushButton_show_all_contacts->setObjectName("pushButton_show_all_contacts");
+
+        verticalLayout->addWidget(pushButton_show_all_contacts);
+
         pushButton_3 = new QPushButton(widget);
         pushButton_3->setObjectName("pushButton_3");
 
@@ -77,6 +83,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton_show_all_contacts->setText(QCoreApplication::translate("MainWindow", "show all contacts", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "edit contact", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "remove contact", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "add contact", nullptr));

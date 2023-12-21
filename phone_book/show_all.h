@@ -15,6 +15,8 @@ public:
     explicit show_all(QWidget *parent = nullptr);
     ~show_all();
 
+private slots:
+
 private:
     Ui::show_all *ui;
 };

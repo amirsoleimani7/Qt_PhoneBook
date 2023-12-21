@@ -45,6 +45,7 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_show_all_contacts_clicked()
 {
-
+    show_1 = new show_all(this);
+    show_1->exec();
 }
 

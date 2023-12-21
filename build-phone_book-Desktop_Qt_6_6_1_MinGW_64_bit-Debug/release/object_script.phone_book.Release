@@ -1,0 +1,11 @@
+release/addacc.o
+release/edit_contact.o
+release/main.o
+release/mainwindow.o
+release/remove_contact.o
+release/show_all.o
+release/moc_addacc.o
+release/moc_edit_contact.o
+release/moc_mainwindow.o
+release/moc_remove_contact.o
+release/moc_show_all.o
