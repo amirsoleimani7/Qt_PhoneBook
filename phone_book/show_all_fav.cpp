@@ -2,13 +2,26 @@
 #include "ui_show_all_fav.h"
 #include <QFile>
 #include <QMessageBox>
+void show_all_fav::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
+
 show_all_fav::show_all_fav(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::show_all_fav)
 {
     ui->setupUi(this);
+}
 
-    QString file_to_show = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+show_all_fav::~show_all_fav()
+{
+    delete ui;
+}
+
+void show_all_fav::on_pushButton_show_all_fav_clicked()
+{
+
+    QString file_to_show = file_directory;
     QFile file_to(file_to_show);
     QStringList uniqueNames;
 
@@ -39,9 +52,6 @@ show_all_fav::show_all_fav(QWidget *parent)
     } else {
         qDebug() << "Could not open the file for reading: " << file_to.errorString();
     }
+
 }
 
-show_all_fav::~show_all_fav()
-{
-    delete ui;
-}

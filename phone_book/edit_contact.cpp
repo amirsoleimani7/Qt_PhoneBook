@@ -14,12 +14,15 @@ edit_contact::~edit_contact()
 {
     delete ui;
 }
+void edit_contact::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
 void edit_contact::on_pushButton_edit_contact_clicked()
 {
     QString name = ui->lineEdit_name->text();
     QString new_name = ui->lineEdit_new_name->text();
 
-    QString file_name_edit = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_name_edit = file_directory;
     QFile my_file_edit(file_name_edit);
 
     if (my_file_edit.open(QIODevice::ReadWrite | QIODevice::Text)) {

@@ -14,9 +14,16 @@ class show_all_fav : public QDialog
 public:
     explicit show_all_fav(QWidget *parent = nullptr);
     ~show_all_fav();
+    void setFileDirectory(const QString& directory);
+
+
+private slots:
+    void on_pushButton_show_all_fav_clicked();
 
 private:
     Ui::show_all_fav *ui;
+    QString file_directory;
+
 };
 
 #endif // SHOW_ALL_FAV_H

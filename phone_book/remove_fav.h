@@ -14,12 +14,15 @@ class remove_fav : public QDialog
 public:
     explicit remove_fav(QWidget *parent = nullptr);
     ~remove_fav();
+    void setFileDirectory(const QString& directory);
 
 private slots:
     void on_pushButton_remove_from_fav_clicked();
 
 private:
     Ui::remove_fav *ui;
+    QString file_directory;
+
 };
 
 #endif // REMOVE_FAV_H

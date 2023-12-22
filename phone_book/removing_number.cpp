@@ -13,7 +13,9 @@ removing_number::~removing_number()
 {
     delete ui;
 }
-
+void removing_number::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
 void removing_number::on_pushButton_remove_number_clicked()
 {
     QString name = ui->lineEdit_name->text();
@@ -30,7 +32,7 @@ void removing_number::on_pushButton_remove_number_clicked()
     QStringList modified_lines;
 
     // Check if the person exists and if the type and number exist for that person
-    QString file_name_for_reading = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_name_for_reading = file_directory;
     QFile my_file_read(file_name_for_reading);
 
     if (my_file_read.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -64,7 +66,7 @@ void removing_number::on_pushButton_remove_number_clicked()
     }
 
     // Write the modified lines back to the file
-    QFile my_file_write("C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt");
+    QFile my_file_write(file_directory);
 
     if (my_file_write.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
         QTextStream out(&my_file_write);

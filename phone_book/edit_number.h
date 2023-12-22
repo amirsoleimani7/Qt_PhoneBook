@@ -14,12 +14,15 @@ class edit_number : public QDialog
 public:
     explicit edit_number(QWidget *parent = nullptr);
     ~edit_number();
+    void setFileDirectory(const QString& directory);
+
 
 private slots:
     void on_pushButton_change_number_clicked();
 
 private:
     Ui::edit_number *ui;
+    QString file_directory;
 };
 
 #endif // EDIT_NUMBER_H

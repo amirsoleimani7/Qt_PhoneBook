@@ -13,6 +13,9 @@ adding_number::~adding_number()
 {
     delete ui;
 }
+void adding_number::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
 void adding_number::on_pushButton_add_number_clicked()
 {
     QString name = ui->lineEdit_name->text();
@@ -28,7 +31,7 @@ void adding_number::on_pushButton_add_number_clicked()
     bool add_flag = true;
 
     // Check if the person exists and if the type already exists for that person
-    QString file_name_for_reading = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_name_for_reading = file_directory;
     QFile my_file_read(file_name_for_reading);
 
     if (my_file_read.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -56,7 +59,7 @@ void adding_number::on_pushButton_add_number_clicked()
 
     if (add_flag) {
         // Append the new entry to the file
-        QFile my_file("C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt");
+        QFile my_file(file_directory);
 
         if (my_file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
             QTextStream out(&my_file);

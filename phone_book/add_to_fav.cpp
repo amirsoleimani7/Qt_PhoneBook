@@ -14,10 +14,15 @@ add_to_fav::~add_to_fav()
     delete ui;
 }
 
+void add_to_fav::setFileDirectory(const QString& directory)
+{
+    file_directory = directory;
+}
+
 void add_to_fav::on_pushButton_add_to_fav_clicked()
 {
     QString name_to_fav = ui->lineEdit_name_to_fav->text();
-    QString file_fav = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_fav = file_directory;
     QFile file_fav_edit(file_fav);
 
     if (file_fav_edit.open(QIODevice::ReadWrite | QIODevice::Text)) {

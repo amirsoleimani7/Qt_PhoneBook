@@ -12,6 +12,7 @@ debug/search.o
 debug/show_all.o
 debug/show_all_fav.o
 debug/show_detail.o
+debug/qrc_icons.o
 debug/moc_add_to_fav.o
 debug/moc_addacc.o
 debug/moc_adding_number.o

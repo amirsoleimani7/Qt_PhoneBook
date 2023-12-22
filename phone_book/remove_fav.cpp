@@ -13,10 +13,14 @@ remove_fav::~remove_fav()
 {
     delete ui;
 }
+void remove_fav::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
+
 void remove_fav::on_pushButton_remove_from_fav_clicked()
 {
     QString name_to_fav = ui->lineEdit_fav_remove->text();
-    QString file_remove_fav = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_remove_fav = file_directory;
     QFile file_fav_edit(file_remove_fav);
 
     if (file_fav_edit.open(QIODevice::ReadWrite | QIODevice::Text)) {

@@ -28,6 +28,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QString file_directory;
+    QString get_name();
 private slots:
     void on_pushButton_clicked();
 
@@ -53,6 +54,15 @@ private slots:
 
     void on_pushButton_search_clicked();
 
+    void on_actionsave_triggered();
+
+    bool saveToFile(const QString &primaryFilePath, const QString &secondaryFilePath);
+    void on_actionload_triggered();
+
+    void on_actionexpotr_triggered();
+
+    void on_actionimport_triggered();
+
 private:
     Ui::MainWindow *ui;
     addacc *add_acc;
@@ -67,5 +77,6 @@ private:
     removing_number *rev_num;
     edit_number *edit_num;
     search *sh;
+    QString file_path;
 };
 #endif // MAINWINDOW_H

@@ -13,11 +13,13 @@ show_detail::~show_detail()
 {
     delete ui;
 }
-
+void show_detail::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
 void show_detail::on_pushButton_show_details_clicked()
 {
     QString name = ui->lineEdit_name_to_show_details->text();
-    QString file_to_show_details = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+    QString file_to_show_details = file_directory;
     QFile my_file_to_show_details(file_to_show_details);
 
     if (my_file_to_show_details.open(QIODevice::ReadOnly | QIODevice::Text)) {

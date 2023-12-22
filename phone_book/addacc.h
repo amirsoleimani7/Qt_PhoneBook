@@ -14,12 +14,14 @@ class addacc : public QDialog
 public:
     explicit addacc(QWidget *parent = nullptr);
     ~addacc();
+    void setFileDirectory(const QString& directory);
 
 private slots:
     void on_pushButton_add_contact_clicked();
 
 private:
     Ui::addacc *ui;
+    QString file_directory;
 };
 
 #endif // ADDACC_H

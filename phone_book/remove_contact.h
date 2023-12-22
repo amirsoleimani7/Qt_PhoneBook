@@ -14,12 +14,16 @@ class remove_contact : public QDialog
 public:
     explicit remove_contact(QWidget *parent = nullptr);
     ~remove_contact();
+    void setFileDirectory(const QString& directory);
+
 
 private slots:
     void on_pushButton_remove_contact_clicked();
 
 private:
     Ui::remove_contact *ui;
+    QString file_directory;
 };
+
 
 #endif // REMOVE_CONTACT_H

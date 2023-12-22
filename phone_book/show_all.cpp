@@ -2,13 +2,28 @@
 #include "ui_show_all.h"
 #include <QFileDialog>
 #include <QMessageBox>
+void show_all::setFileDirectory(const QString& directory){
+    file_directory = directory;
+}
+
+
+
 show_all::show_all(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::show_all)
 {
     ui->setupUi(this);
 
-    QString file_to_show = "C:/Users/amir_1/Desktop/cpp/kargah_9/phone_book/accounts.txt";
+}
+
+show_all::~show_all()
+{
+    delete ui;
+}
+
+void show_all::on_pushButton_show_all_clicked()
+{
+    QString file_to_show = file_directory;
     QFile file_to(file_to_show);
     QStringList uniqueNames;
 
@@ -37,10 +52,5 @@ show_all::show_all(QWidget *parent)
         qDebug() << "Could not open the file for reading: " << file_to.errorString();
     }
 
-
 }
 
-show_all::~show_all()
-{
-    delete ui;
-}

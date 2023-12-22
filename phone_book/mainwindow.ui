@@ -413,6 +413,10 @@ QPushButton:pressed {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionsave">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/diskette.png</normaloff>:/icons/icons/diskette.png</iconset>
+   </property>
    <property name="text">
     <string>save</string>
    </property>
@@ -421,6 +425,10 @@ QPushButton:pressed {
    </property>
   </action>
   <action name="actionload">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/download.png</normaloff>:/icons/icons/download.png</iconset>
+   </property>
    <property name="text">
     <string>load</string>
    </property>
@@ -429,6 +437,10 @@ QPushButton:pressed {
    </property>
   </action>
   <action name="actionexpotr">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/export.png</normaloff>:/icons/icons/export.png</iconset>
+   </property>
    <property name="text">
     <string>export</string>
    </property>
@@ -437,6 +449,10 @@ QPushButton:pressed {
    </property>
   </action>
   <action name="actionimport">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/import (2).png</normaloff>:/icons/icons/import (2).png</iconset>
+   </property>
    <property name="text">
     <string>import</string>
    </property>
@@ -445,6 +461,8 @@ QPushButton:pressed {
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -12,6 +12,7 @@ release/search.o
 release/show_all.o
 release/show_all_fav.o
 release/show_detail.o
+release/qrc_icons.o
 release/moc_add_to_fav.o
 release/moc_addacc.o
 release/moc_adding_number.o

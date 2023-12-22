@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/diskette.png</file>
+        <file>icons/download.png</file>
+        <file>icons/export.png</file>
+        <file>icons/import (2).png</file>
+    </qresource>
+</RCC>
